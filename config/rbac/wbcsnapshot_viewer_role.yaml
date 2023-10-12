@@ -1,0 +1,27 @@
+# permissions for end users to view wbcsnapshots.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  labels:
+    app.kubernetes.io/name: clusterrole
+    app.kubernetes.io/instance: wbcsnapshot-viewer-role
+    app.kubernetes.io/component: rbac
+    app.kubernetes.io/created-by: testvm
+    app.kubernetes.io/part-of: testvm
+    app.kubernetes.io/managed-by: kustomize
+  name: wbcsnapshot-viewer-role
+rules:
+- apiGroups:
+  - snapshot.wbc.com
+  resources:
+  - wbcsnapshots
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - snapshot.wbc.com
+  resources:
+  - wbcsnapshots/status
+  verbs:
+  - get
