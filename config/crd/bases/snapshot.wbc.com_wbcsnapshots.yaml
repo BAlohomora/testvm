@@ -42,8 +42,8 @@ spec:
               sourceClaimName:
                 type: string
               sourceVolumeName:
-                description: Foo is an example field of WbcSnapshot. Edit wbcsnapshot_types.go
-                  to remove/update
+                description: 'INSERT ADDITIONAL SPEC FIELDS - desired state of cluster
+                  Important: Run "make" to regenerate code after modifying this file'
                 type: string
             type: object
           status:
