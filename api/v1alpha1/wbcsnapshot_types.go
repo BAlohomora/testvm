@@ -29,13 +29,21 @@ type WbcSnapshotSpec struct {
 	// Important: Run "make" to regenerate code after modifying this file
 
 	// Foo is an example field of WbcSnapshot. Edit wbcsnapshot_types.go to remove/update
-	Foo string `json:"foo,omitempty"`
+	SourceVolumeName string `json:"sourceVolumeName,omitempty"`
+	SourceClaimName string `json:"sourceClaimName,omitempty"`
+	Namespace string `json:"namespace,omitempty"`
+	HostPath string `json:"hostPath,omitempty"`
+	
 }
 
 // WbcSnapshotStatus defines the observed state of WbcSnapshot
 type WbcSnapshotStatus struct {
 	// INSERT ADDITIONAL STATUS FIELD - define observed state of cluster
 	// Important: Run "make" to regenerate code after modifying this file
+
+	Complete string `json:"complete,omitempty"`
+	NewVolumeName string `json:"newVolumeName,omitempty"`
+	NewClaimName string `json:"newClaimName,omitempty"`
 }
 
 //+kubebuilder:object:root=true
