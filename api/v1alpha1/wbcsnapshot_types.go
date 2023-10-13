@@ -25,8 +25,7 @@ import (
 
 // WbcSnapshotSpec defines the desired state of WbcSnapshot
 type WbcSnapshotSpec struct {
-	// INSERT ADDITIONAL SPEC FIELDS - desired state of cluster
-	// Important: Run "make" to regenerate code after modifying this file
+	
 	SourceVolumeName string `json:"sourceVolumeName,omitempty"`
 	SourceClaimName string `json:"sourceClaimName,omitempty"`
 	Namespace string `json:"namespace,omitempty"`
@@ -36,9 +35,7 @@ type WbcSnapshotSpec struct {
 
 // WbcSnapshotStatus defines the observed state of WbcSnapshot
 type WbcSnapshotStatus struct {
-	// INSERT ADDITIONAL STATUS FIELD - define observed state of cluster
-	// Important: Run "make" to regenerate code after modifying this file
-
+	
 	Complete string `json:"complete,omitempty"`
 	NewVolumeName string `json:"newVolumeName,omitempty"`
 	NewClaimName string `json:"newClaimName,omitempty"`
