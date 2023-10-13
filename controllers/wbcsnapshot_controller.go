@@ -129,7 +129,7 @@ func (r *WbcSnapshotReconciler) Reconcile(ctx context.Context, req ctrl.Request)
 	}
 
 	pvcCreateErr := r.Create(ctx, &newPersistentVolClaim)
-	if pvcCreateErr !- nil{
+	if pvcCreateErr != nil{
 		r.Log.Error(pvcCreateErr,"Error encountered creating new pvc")
 		return ctrl.Result{}, pvcCreateErr
 	}
@@ -187,7 +187,7 @@ func (r *WbcSnapshotReconciler) Reconcile(ctx context.Context, req ctrl.Request)
 	}
 
 	podCreateErr := r.Create(ctx, &snapshotCreatorPod)
-	if podCreateErr !- nil{
+	if podCreateErr != nil{
 		r.Log.Error(pvCreateErr,"Error encountered creating snapshot pod")
 		return ctrl.Result{}, podCreateErr
 	}
